@@ -21,7 +21,7 @@ import (
 
 
 var (
-   module_main = "server.go"
+   module_main = "prometheus_server.go"
    mux = http.NewServeMux()
    mu  sync.Mutex
 
