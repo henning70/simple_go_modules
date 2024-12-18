@@ -2,9 +2,10 @@
 
 ## Usage
 
-import (
-  ...
-  ...
-
-  "github.com/henning70/logging"
+import (\
+$\quad$...\
+$\quad$...\
+$\quad$\
+$\quad$"github.com/henning70/logging"\
+$\quad$...\
 )
