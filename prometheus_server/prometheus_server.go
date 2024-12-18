@@ -12,8 +12,6 @@ import (
 
     "github.com/prometheus/common/promlog"
     "github.com/prometheus/exporter-toolkit/web"
-    "github.com/prometheus/client_golang/prometheus"
-    "github.com/prometheus/client_golang/prometheus/promauto"
     "github.com/prometheus/client_golang/prometheus/promhttp"
 
     "github.com/henning70/simple_go_modules/logging"
