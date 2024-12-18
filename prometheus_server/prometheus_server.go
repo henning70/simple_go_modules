@@ -21,20 +21,6 @@ import (
 
 
 var (
-   downdetector_metrics = promauto.NewGaugeVec(prometheus.GaugeOpts{
-       Name: "downdetector_metrics",
-       Help: "Downdetector metrics",
-   },
-       []string{"name", "country", "company"},
-   )
-
-   downdetector_error = promauto.NewGaugeVec(prometheus.GaugeOpts{
-       Name: "downdetector_error",
-       Help: "Downdetector error information",
-   },
-       []string{"name", "country", "company", "error"},
-   )
-
    module_main = "server.go"
    mux = http.NewServeMux()
    mu  sync.Mutex
