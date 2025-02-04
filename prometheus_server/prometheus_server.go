@@ -23,8 +23,6 @@ var (
    mux = http.NewServeMux()
    mu  sync.Mutex
 
-   logger      = promlog.New(&promlog.Config{})
-
    defaultExporter      string
    defaultListenAddress string
    defaultTLSConfig     = "tls_config.yml"
@@ -80,6 +78,8 @@ func init_webconfig() (web.FlagConfig, *string, *string) {
 }
 
 func init_exporter_listener(listenAddress *string, webConfig web.FlagConfig) {
+    logger      = promlog.New(&promlog.Config{})
+    
     mux.Handle("/metrics", promhttp.Handler())
 
     server := &http.Server{}
